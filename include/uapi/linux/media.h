@@ -165,41 +165,17 @@ struct media_entity_desc {
 		struct {
 			__u32 major;
 			__u32 minor;
-		} dev;
-
-#if !defined(__KERNEL__)
-		/*
-		 * TODO: this shouldn't have been added without
-		 * actual drivers that use this. When the first real driver
-		 * appears that sets this information, special attention
-		 * should be given whether this information is 1) enough, and
-		 * 2) can deal with udev rules that rename devices. The struct
-		 * dev would not be sufficient for this since that does not
-		 * contain the subdevice information. In addition, struct dev
-		 * can only refer to a single device, and not to multiple (e.g.
-		 * pcm and mixer devices).
-		 */
-		struct {
-			__u32 card;
-			__u32 device;
-			__u32 subdevice;
-		} alsa;
-
-		/*
-		 * DEPRECATED: previous node specifications. Kept just to
-		 * avoid breaking compilation. Use media_entity_desc.dev
-		 * instead.
-		 */
-		struct {
-			__u32 major;
-			__u32 minor;
 		} v4l;
 		struct {
 			__u32 major;
 			__u32 minor;
 		} fb;
+		struct {
+			__u32 card;
+			__u32 device;
+			__u32 subdevice;
+		} alsa;
 		int dvb;
-#endif
 
 		/* Sub-device specifications */
 		/* Nothing needed yet */
