@@ -870,8 +870,6 @@
 			<&tlmm 40 0>,
 			<&tlmm 39 0>;
 		/delete-property/ qcom,gpio-vana;
-		qcom,gpio-req-tbl-num = <0 1 2>;
-		qcom,gpio-req-tbl-flags = <1 0 0>;
 		qcom,gpio-req-tbl-label = "CAMIF_MCLK0",
 			"CAM_RESET0",
 			"CAM_STANDBY0";
