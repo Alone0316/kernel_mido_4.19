@@ -58,7 +58,7 @@ KERNEL_NAME="FussionKernel"
 
 DEFCONFIG="vendor/mido_defconfig"
 
-AnyKernel="https://github.com/Hunter-commits/anykernel.git"
+AnyKernel="https://github.com/Alone0316/AnyKernel3"
 AnyKernelbranch="master"
 
 HOSST="Alone's Buildbot"
